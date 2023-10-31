@@ -12,7 +12,7 @@
         <input type="text" placeholder="Enter Weight in Kg" id="weight">
     </div>
     <div>
-        <h2>And your Height in Here (CM)</h2>
+        <h2>And your Height in Here (M)</h2>
         <input type="text" placeholder="Enter height in Cm" id="height">
     </div>
     <button id="bmiButton" style="margin-top: 30px; margin-left: 20px;">Calculate BMI</button>
@@ -25,7 +25,7 @@
     let height = document.getElementById("height");
     let dBmi = document.querySelector("h2 > span");
     calBtn.addEventListener('click', function(){
-      let bmi = (weight.value) / (height.value * height.value)
+      let bmi = (+weight.value) / (+height.value * +height.value)
       if(bmi <= 18.4){
         dBmi.innerText = bmi +" You are UnderWeight"
       }
